@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{919FA1D8-1B48-47D5-8470-D6DCA43E6971}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SPK_AHP_TOPSIS.My.MyApplication</StartupObject>
+    <RootNamespace>SPK_AHP_TOPSIS</RootNamespace>
+    <AssemblyName>SPK_AHP_TOPSIS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>Icon Sapi.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SPK_AHP_TOPSIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SPK_AHP_TOPSIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=6.8.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AHPReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AHPReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSLaporan.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSLaporan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSLaporan.vb">
+      <DependentUpon>DSLaporan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="f_laporan_ahp.Designer.vb">
+      <DependentUpon>f_laporan_ahp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_laporan_ahp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_alternatif.Designer.vb">
+      <DependentUpon>f_alternatif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_alternatif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_analisa_ahp.Designer.vb">
+      <DependentUpon>f_analisa_ahp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_analisa_ahp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_dbconfig.Designer.vb">
+      <DependentUpon>f_dbconfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_dbconfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_ganti_paswd.Designer.vb">
+      <DependentUpon>f_ganti_paswd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_ganti_paswd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_kriteria.Designer.vb">
+      <DependentUpon>f_kriteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_kriteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_laporan.Designer.vb">
+      <DependentUpon>f_laporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_laporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_login.Designer.vb">
+      <DependentUpon>f_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_proses_ahp.Designer.vb">
+      <DependentUpon>f_proses_ahp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_proses_ahp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_proses_topsis.Designer.vb">
+      <DependentUpon>f_proses_topsis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_proses_topsis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_rank_topsis.Designer.vb">
+      <DependentUpon>f_rank_topsis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_rank_topsis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_user.Designer.vb">
+      <DependentUpon>f_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_utama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_utama.Designer.vb">
+      <DependentUpon>f_utama.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Laporan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LaporanAHP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanAHP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="m_addon.vb" />
+    <Compile Include="m_koneksi.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="f_laporan_ahp.resx">
+      <DependentUpon>f_laporan_ahp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_alternatif.resx">
+      <DependentUpon>f_alternatif.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_analisa_ahp.resx">
+      <DependentUpon>f_analisa_ahp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_dbconfig.resx">
+      <DependentUpon>f_dbconfig.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_ganti_paswd.resx">
+      <DependentUpon>f_ganti_paswd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_kriteria.resx">
+      <DependentUpon>f_kriteria.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_laporan.resx">
+      <DependentUpon>f_laporan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_login.resx">
+      <DependentUpon>f_login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_proses_ahp.resx">
+      <DependentUpon>f_proses_ahp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_proses_topsis.resx">
+      <DependentUpon>f_proses_topsis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_rank_topsis.resx">
+      <DependentUpon>f_rank_topsis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_user.resx">
+      <DependentUpon>f_user.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_utama.resx">
+      <DependentUpon>f_utama.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Laporan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanAHP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanAHP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AHPReport.xsc">
+      <DependentUpon>AHPReport.xsd</DependentUpon>
+    </None>
+    <None Include="AHPReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AHPReport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="AHPReport.xss">
+      <DependentUpon>AHPReport.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="DSLaporan.xsc">
+      <DependentUpon>DSLaporan.xsd</DependentUpon>
+    </None>
+    <None Include="DSLaporan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSLaporan.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSLaporan.xss">
+      <DependentUpon>DSLaporan.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon Sapi.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
